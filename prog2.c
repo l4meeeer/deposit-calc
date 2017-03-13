@@ -44,6 +44,7 @@ int main()
 
 	}
 	printf ("Money: %.1lf\n", m);
+	//printf("NEW");
 	system("pause");
 	return 0;
 }
