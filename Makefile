@@ -1,4 +1,4 @@
-all: main deposit_test
+all: main
 
 main: build/src/main.o build/src/deposit.o
 	gcc -Wall -Werror -o bin/main build/src/main.o build/src/deposit.o
