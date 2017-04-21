@@ -1,15 +1,16 @@
 all: main
 
-main: build/src/main.o build/src/deposit.o
-	gcc -Wall -Werror -o bin/main build/src/main.o build/src/deposit.o
+main: main.o deposit.o
+	gcc -Wall -Werror -MP -MMD -o bin/main build/main.o build/deposit.o
 
-build/src/main.o: src/main.c
-	gcc -Wall -Werror -o build/src/main.o -c src/main.c
+main.o: src/main.c
+	gcc -Wall -Werror -MP -MMD -o build/main.o -c src/main.c
 
-build/src/deposit.o: src/deposit.c
-	gcc -Wall -Werror -o build/src/deposit.o -c src/deposit.c
+deposit.o: src/deposit.c
+	gcc -Wall -Werror -MP -MMD -o build/deposit.o -c src/deposit.c
 
 .PHONY: clean
 
 clean:
-	rm -rf build/src/*.o
+	rm -rf build/* bin/*
+
