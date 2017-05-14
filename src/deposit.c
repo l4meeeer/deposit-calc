@@ -26,7 +26,7 @@ int result(double m, int d)
 		if (d > 240 && d <= 365) {
 			m *= 1.12;
 		}
-		printf("Money: %.2lf\n", m);
+		//printf("Money: %.2lf", m);
 
 		return m;
 	}
@@ -43,7 +43,7 @@ int result(double m, int d)
 		if (d > 240 && d <= 365) {
 			m *= 1.15;
 		}
-		printf("Money: %.2lf\n", m);
+		//printf("Money: %.2lf", m);
 
 		return m;
 	}
